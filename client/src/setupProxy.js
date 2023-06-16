@@ -5,13 +5,13 @@ module.exports = function (app) {
   app.use(
     "/api/*",
     createProxyMiddleware({
-      target: "http://localhost:5000"
+      target: "http://localhost:3001"
     })
   );
   app.use(
     "/auth/**",
     createProxyMiddleware({
-      target: "http://localhost:5000"
+      target: "http://localhost:3001"
     })
   );
 };
