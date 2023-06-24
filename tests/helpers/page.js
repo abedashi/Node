@@ -11,7 +11,8 @@ class CustomPage {
 
     static async build() {
         const browser = await chromium.launch({
-            headless: false,
+            headless: true,
+            args: ['--no-sandbox']
         });
         const context = await browser.newContext();
         const page = await context.newPage();
